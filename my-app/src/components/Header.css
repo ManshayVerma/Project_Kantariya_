@@ -1,0 +1,76 @@
+/* src/components/Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #064F39; /* Green accent color */
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #064F39;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #017a59; /* Lighter green color for hover */
+}
+
+.schedule-demo-btn {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  color: #064F39;
+  border: 2px solid #064F39;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.schedule-demo-btn .arrow {
+  margin-left: 8px;
+  transition: margin-left 0.3s ease;
+}
+
+.schedule-demo-btn:hover .arrow {
+  margin-left: 16px;
+}
+
+.schedule-demo-btn:hover {
+  background-color: #064F39;
+  color: #fff;
+  border-color: #064F39;
+}

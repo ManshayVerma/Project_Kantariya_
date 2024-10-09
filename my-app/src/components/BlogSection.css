@@ -1,0 +1,190 @@
+/* src/components/BlogSection.css */
+/* Main Blog Title Section */
+.blog-section {
+  padding-top: 50px;
+  padding-left: 150px; /* Add more padding to give space at the top */
+  padding-right: 150px; /* Add more padding to give space at the top */
+  padding-bottom: 30px; /* Add spacing at the bottom */
+  text-align: left; /* Ensure everything is left-aligned */
+}
+
+.blog-section h1 {
+  font-size: 48px; /* Adjust font size for the main heading */
+  font-weight: 400; /* Make the main heading lighter */
+  line-height: 1.2; /* Add some line spacing */
+  color: #333; /* Darker color for heading */
+  margin-bottom: 10px; /* Small margin below the heading */
+}
+
+.blog-section em {
+  font-size: 48px; /* Font size for the emphasized (italic) text */
+  font-style: italic;
+  font-weight: 300; /* Lighter weight for the italic text */
+  color: #555; /* Lighter color for emphasis */
+}
+
+.blog-section p {
+  font-size: 20px; /* Adjust font size for subtitle */
+  color: #888; /* Subtle, lighter color for subtitle */
+  margin-bottom: 40px; /* Larger margin below subtitle */
+}
+
+/* Filter Buttons Section */
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px; /* Add margin between title and buttons */
+  margin-bottom: 30px; /* Adjust margin at the bottom */
+}
+
+.filter-button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #f0f0f0; /* Default background */
+  border: none;
+  font-size: 14px;
+  color: #666;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.filter-button.active {
+  background-color: #064F39; /* Active state */
+  color: white; /* White text when active */
+}
+
+.filter-button:hover {
+  background-color: #064F39; /* Hover color */
+  color: white;
+}
+
+/* Blog grid for three cards in one row */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 20px; /* Adjust the spacing between cards */
+  padding: 0 50px; /* Add some padding to the grid for left and right */
+}
+
+/* Blog card styling */
+.blog-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  height: 220px; /* Set a fixed height for the cards */
+}
+
+/* Full cover for the image */
+.blog-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire card without stretching */
+  z-index: 1; /* Image stays behind the text */
+}
+
+/* Text content on top of the image */
+.blog-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  z-index: 2; /* Ensure text appears on top of the image */
+  background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background behind the text */
+  width: 100%;
+  color: #fff; /* White text for better contrast */
+}
+
+.blog-category {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #064F39;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.blog-title1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.blog-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.blog-read-time {
+  font-size: 2px;
+  margin-top: 5px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.pagination span {
+  font-size: 16px;
+}
+/* Banner Section */
+.banner {
+  background-image: url('https://s3-alpha-sig.figma.com/img/6368/a7c2/7c714d533a66059ce71ed7f63cde0d90?Expires=1729468800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RFyarDkqN~qm-HCdxeZHKk0x48AWXyl5ycFluSC8vQfgYRzMYbToKpKpnT9qbIRVC56IZdzNQtiRem~3dH5SO3UKd1o49Sbe29Hw9X57AKXOC0-LbnGPfzUD0-oUEseAr5N-Cqp-ceJ725nJROYNAe6HBtWFI22JB37Q7psvpmsn~wKlpa4Usvv-xgUeQ8mRJ0apORYEFqm9RN5PIn8szzw9wtuR8TJ82~3iH4qe96KSyrSRMsB4JXXwam9-3Ze0EAF6GbCXm931ybNfQS~E85i1OLe2P3hbTR1~OT8pLBvmXM7c4zDDVwyiwiNrkCV5bUlISK81gS1VNVM6Ft4Uog__'); /* Replace with the correct path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 60px;
+  border-radius: 12px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #064F39;
+  margin-top: 40px;
+}
+
+.banner h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.banner-btn {
+  padding: 10px 20px;
+  border: 2px solid #064F39;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #064F39;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-btn .arrow {
+  margin-left: 8px;
+  font-size: 16px;
+  transition: margin-left 0.3s ease;
+}
+
+.banner-btn:hover .arrow {
+  margin-left: 12px;
+}
+
+.banner-btn:hover {
+  background-color: #064F39;
+  color: white;
+}

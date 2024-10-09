@@ -1,0 +1,42 @@
+/* Styling for the blog card */
+.blog-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 300px; /* Set a fixed height for the card */
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column; /* Stack the content at the bottom */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure image fully covers the card */
+.blog-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the card without being stretched */
+  z-index: 1;
+}
+
+/* Content container to display text on the image */
+.blog-card .category, .blog-card h3 {
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  color: white; /* Make the text white for contrast */
+}
+
+/* Dark background overlay on top of the image */
+.blog-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+  z-index: 1;
+}
